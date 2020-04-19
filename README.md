@@ -1,19 +1,21 @@
 # josm-christianity-ua
 JOSM Preset for mapping Christianity objects in Ukraine on OpenStreetMap
-v.02 (draft)
+
+### v.02 (draft version)
 
 [Християнство в Україні](https://wiki.openstreetmap.org/wiki/Uk:%D0%A5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D1%8F%D0%BD%D1%81%D1%82%D0%B2%D0%BE_%D0%B2_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%96)
 
 ## TODO
+0. Check & Fix type `node,way,closedway,multipolygon`
 1. Fix Protestant Christianity object and Church
-2. Heritage and Building material
+2. Add Heritage and Building material
 3. Fix other styles.
 
 ## Howto Install
 Add `https://raw.githubusercontent.com/gontsa/josm-christianity-ua/master/christian-ua.xml` in JOSM editor.
 
-Uk: Заготовки -> Preset preferences ->Активні заготовки «+»
+**Uk**: *Заготовки* -> *Preset preferences* -> *Активні заготовки* «+»
 
-En: Presets -> Preset preferences ->Active presets «+»
+**En**: *Presets* -> *Preset preferences* -> *Active presets* «+»
 
 
