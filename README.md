@@ -9,3 +9,11 @@ v.02 (draft)
 2. Heritage and Building material
 3. Fix other styles.
 
+## Howto Install
+Add `https://raw.githubusercontent.com/gontsa/josm-christianity-ua/master/christian-ua.xml` in JOSM editor.
+
+Uk: Заготовки -> Preset preferences ->Активні заготовки «+»
+
+En: Presets -> Preset preferences ->Active presets «+»
+
+
