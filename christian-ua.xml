@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
-	author="Fedir Gontsa, fedir.gontsa@gmail.com"
+	author="Fedir Gontsa, fedir.gontsa@gmail.com, https://www.openstreetmap.org/user/Gontsa"
 	description="Denominations represented in Ukraine"
     uk.description="Заготовки для додавання об'єктів християнських конфесій, представлених в Україні"
 	shortdescription="Denominations"
     uk.shortdescription="Конфесії"
-	version="0.2_2020-04-19">
+	version="0.3_2020-04-21">
+<!-- 
+    Thanks for the help:
+    Alex Zaikin https://www.openstreetmap.org/user/slayzex
+    Pavlo Dudka https://www.openstreetmap.org/user/dudka
+    Andriy Golovin https://www.openstreetmap.org/user/andygol 
+    Alex Riabtsev https://www.openstreetmap.org/user/AlexRiabtsev
 
+    Pics have been derived from
+    https://upload.wikimedia.org/wikipedia/commons/7/7f/LatinCross.png
+    https://upload.wikimedia.org/wikipedia/commons/e/e9/OrthodoxCross.svg
+-->
 <!-- Templates -->
 <chunk id="name">
+        <label text="Name" uk.text="Назва"/>
         <text key="name" text="name" uk.text="Офіційна назва" />
-        <text key="name:uk" text="name:uk" />
-        <text key="name:en" text="name:en" />
-        <text key="name:ru" text="name:ru" />
+        <text key="name:uk" text="name:uk" uk.text="українською" />
+        <text key="name:en" text="name:en" uk.text="англійською" />
+        <text key="name:ru" text="name:ru" uk.text="російською" />
 </chunk>
 <chunk id="addr">
         <text key="addr:street" text="Street Name" uk.text="Назва вулиці" />
         <text key="addr:housenumber" text="House number" uk.text="Номер будинку" />
 </chunk>
 <chunk id="contact">
-        <link wiki="Key:contact" />
+        <link wiki="Key:contact" text="Contact" uk.text="Контактна інформація" />
         <space />
         <text key="contact:website" text="Website" match="key" />
         <text key="contact:email" text="Email" match="key" />
@@ -40,8 +51,11 @@
 <chunk id="fence">
     <combo key="barrier" text="Barrier" uk.text="Огорожа" values="fence,chain,hedge,kerb" uk.display_values="паркан,ланцюг,жива огорожа,бордюр" default="" delete_if_empty="true" />
 </chunk>
+<chunk id="service_times">
+    <combo key="service_times" text="Service Times" uk.text="Час служби" delimiter="|" values="Sa 08:00-12:00|Su 08:00-18:00|Su 10:00+|week 01-53/2 Fr 09:00-12:00; week 02-52/2 We 09:00-12:00" values_no_i18n="true" />
+</chunk>
 <chunk id="oh">
-        <combo key="opening_hours" text="Opening Hours" uk.text="Відкриті години" delimiter="|" values="24/7|08:30-12:30,15:30-20:00|Sa-Su 00:00-24:00|Mo-Su 09:00-21:00|Mo-Sa 08:00-18:00|Mo-Fr 09:00-17:00|Mo-Fr 08:30-20:00; Sa,Su 08:00-15:00; PH off|Mo-Fr 08:30-20:00; Tu-Su 08:00-15:00; Sa 08:00-12:00|Mo-Su 08:00-18:00; Apr 10-15 off; Jun 08:00-14:00; Aug off; Dec 25 off|sunrise-sunset|Su 10:00+|week 01-53/2 Fr 09:00-12:00; week 02-52/2 We 09:00-12:00" values_no_i18n="true" />
+    <combo key="opening_hours" text="Opening Hours" uk.text="Відчинено" delimiter="|" values="24/7|08:30-12:30,15:30-20:00|Sa-Su 00:00-24:00|Mo-Su 09:00-21:00|Mo-Sa 08:00-18:00|Mo-Fr 09:00-17:00|Mo-Fr 08:30-20:00; Sa,Su 08:00-15:00; PH off|Mo-Fr 08:30-20:00; Tu-Su 08:00-15:00; Sa 08:00-12:00|Mo-Su 08:00-18:00; Apr 10-15 off; Jun 08:00-14:00; Aug off; Dec 25 off|sunrise-sunset|Su 10:00+|week 01-53/2 Fr 09:00-12:00; week 02-52/2 We 09:00-12:00" values_no_i18n="true" />
 </chunk>
 <chunk id="architecture">
     <link wiki="Key:building:architecture" text="Architectural style" uk.text="Архітектурний стиль" />
@@ -49,6 +63,8 @@
     <combo key="building:use" text="Building use" uk.text="Використовується" values="place_of_worship,warehouse,industrial,commercial,residential" uk.display_values="" default="place_of_worship" delete_if_empty="true" />
     <text key="start_date" text="Start date" uk.text="Дата будівництва" />
     <text key="architect" text="Architect" uk.text="Архітектор" />
+    <space />
+    <combo key="building:material" text="Material Type" uk.text="Будівельний Матеріал" values="plaster,brick,silicate_brick,stone,concrete,wood,glass,metal,vinyl" uk.display_values="штукатурка,червона цегла,силікатна цегла,камінь,бетон,дерево,скло,метал,пластикова вагонка" default="brick" delete_if_empty="true" />
 </chunk>
 <chunk id="catholic_denomination">
     <combo key="denomination" text="Denomination" uk.text="Конфесія" values="roman_catholic,ukrainian_greek_catholic,mukachiv_greek_catholic" uk.display_values="Римо-Католицька Церква в Україні,Українська Греко-Католицька Церква,Мукачівська греко-католицька єпархія" default="ukrainian_greek_catholic" delete_if_empty="true" />
@@ -57,11 +73,11 @@
     <combo key="denomination" text="Denomination" uk.text="Конфесія" values="ukrainian_orthodox,russian_orthodox" uk.display_values="Православна церква України,Українська православна церква МП" default="" delete_if_empty="true" />
 </chunk>
 <chunk id="protestant_denomination">
-    <combo key="denomination" text="Denomination" uk.text="Конфесія" values="seventh_day_adventist,baptist,charismatic,jehovahs_witness,lutheran,mennonite,mormon,new_apostolic,pentecostal,protestant" default="" delete_if_empty="true" />
+    <combo key="denomination" text="Denomination" uk.text="Конфесія" values="anglican,baptist,charismatic,jehovahs_witness,lutheran,mennonite,mormon,pentecostal,reformed,seventh_day_adventist" default="" delete_if_empty="true" />
 </chunk>
 <!-- Menu -->
 <group name="Denomination in Ukraine" uk.name="Християнські об'єкти в Україні">
-    <group name="Catholic Church" uk.name="Католицька церква" icon="https://upload.wikimedia.org/wikipedia/commons/7/7f/LatinCross.png">
+    <group name="Catholic" uk.name="Католицизм" icon="https://upload.wikimedia.org/wikipedia/commons/7/7f/LatinCross.png">
         <item name="Entrance" uk.name="Вхідна брама" icon="" type="node" preset_name_label="true">
             <key key="entrance" value="main" />  
         </item>
@@ -90,46 +106,61 @@
             <text key="building:levels" text="building:levels" />
         </item>
         <item name="Cathedral" uk.name="Собор" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+            <key key="amenity" value="place_of_worship" />
+            <key key="religion" value="christian" />
             <key key="building" value="cathedral" />
             <reference ref="catholic_denomination" />
             <reference ref="name" />
-            <reference ref="addr" />
-            <reference ref="wikipedia" />
+            <space />
+            <reference ref="service_times" />
             <reference ref="oh" />
+            <reference ref="wikipedia" />
+            <space />
+            <reference ref="addr" />
             <optional>
             <reference ref="contact" />
             <reference ref="architecture" />
             </optional>
         </item>
         <item name="Church" uk.name="Костел" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+            <key key="amenity" value="place_of_worship" />
             <key key="religion" value="christian" />
+            <key key="building" value="church" />
             <reference ref="catholic_denomination" />
             <reference ref="name" />
+            <space />
+            <reference ref="service_times" />
+            <reference ref="oh" />
             <reference ref="addr" />
             <reference ref="wikipedia" />
-            <reference ref="oh" />
             <optional>
             <reference ref="contact" />
             <reference ref="architecture" />
             </optional>
         </item>
         <item name="Chapel" uk.name="Каплиця" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+            <key key="amenity" value="place_of_worship" />
             <key key="religion" value="christian" />
-            <reference ref="catholic_denomination" />
+            <key key="building" value="chapel" />
             <reference ref="name" />
+            <reference ref="catholic_denomination" />
+            <space />
+            <reference ref="service_times" />
+            <reference ref="oh" />
             <reference ref="addr" />
             <reference ref="wikipedia" />
-            <reference ref="oh" />
             <optional>
             <reference ref="contact" />
             <reference ref="architecture" />
             </optional>
         </item>
-        <item name="Confessional school" uk.name="Конфесіональна школа" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Confessional school" uk.name="Конфесійна школа" icon="" type="node,closedway,multipolygon" preset_name_label="true">
             <key key="religion" value="christian" />
             <key key="amenity" value="school" />
-            <reference ref="catholic_denomination" />
+            <key key="building" value="school" />
             <reference ref="name" />
+            <reference ref="catholic_denomination" />
+            <space />
             <reference ref="addr" />
             <reference ref="oh" />
             <optional>
@@ -141,8 +172,9 @@
         <item name="Confessional shop" uk.name="Церковна крамниця" icon="" type="node,closedway,multipolygon" preset_name_label="true">
             <key key="religion" value="christian" />
             <key key="shop" value="religion" />
-            <reference ref="catholic_denomination" />
             <reference ref="name" />
+            <reference ref="catholic_denomination" />
+            <space />
             <reference ref="addr" />
             <reference ref="oh" />
         </item>
@@ -151,11 +183,8 @@
             <space />
             <label text="Roman Catholic Grave yard" uk.text="Цвинтар біля церкви/костелу"/>
             <space />
-                <reference ref="name" />
                 <reference ref="catholic_denomination" />
-                <reference ref="wikipedia" />
                 <reference ref="grave_yard" />
-                <reference ref="oh" />
                 <reference ref="fence" />
         </item>
         <item name="Church Land" uk.name="Територія церкви" icon="" type="closedway,multipolygon" preset_name_label="true">
@@ -171,8 +200,9 @@
             <key key="landuse" value="religious" />
             <key key="religion" value="christian" />
             <key key="amenity" value="monastery" />
-            <reference ref="catholic_denomination" />
             <reference ref="name" />
+            <reference ref="catholic_denomination" />
+            <space />
             <reference ref="addr" />
             <reference ref="contact" />
                 <optional>
@@ -181,7 +211,7 @@
                 </optional>
         </item>
     </group>
-    <group name="Orthodox Church" uk.name="Православна церква" icon="https://upload.wikimedia.org/wikipedia/commons/e/e9/OrthodoxCross.svg">
+    <group name="Orthodox" uk.name="Православ'я" icon="https://upload.wikimedia.org/wikipedia/commons/e/e9/OrthodoxCross.svg">
         <item name="Entrance" uk.name="Вхідна брама" icon="" type="node" preset_name_label="true">
             <key key="entrance" value="main" />  
         </item>
@@ -210,46 +240,58 @@
             <text key="building:levels" text="building:levels" />
         </item>
         <item name="Cathedral" uk.name="Собор" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+            <key key="amenity" value="place_of_worship" />
+            <key key="religion" value="christian" />
             <key key="building" value="cathedral" />
-            <reference ref="orthodox_denomination" />
             <reference ref="name" />
+            <reference ref="orthodox_denomination" />
+            <space />
+            <reference ref="service_times" />
+            <reference ref="oh" />
             <reference ref="addr" />
             <reference ref="wikipedia" />
-            <reference ref="oh" />
             <optional>
             <reference ref="contact" />
             <reference ref="architecture" />
             </optional>
         </item>
         <item name="Church" uk.name="Церква" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+            <key key="amenity" value="place_of_worship" />
             <key key="religion" value="christian" />
-            <reference ref="orthodox_denomination" />
+            <key key="building" value="church" />
             <reference ref="name" />
+            <reference ref="orthodox_denomination" />
+            <space />
+            <reference ref="service_times" />
+            <reference ref="oh" />
             <reference ref="addr" />
             <reference ref="wikipedia" />
-            <reference ref="oh" />
             <optional>
             <reference ref="contact" />
             <reference ref="architecture" />
             </optional>
         </item>
         <item name="Chapel" uk.name="Каплиця" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+            <key key="amenity" value="place_of_worship" />
             <key key="religion" value="christian" />
-            <reference ref="orthodox_denomination" />
+            <key key="building" value="chapel" />
             <reference ref="name" />
+            <reference ref="orthodox_denomination" />
+            <reference ref="service_times" />
+            <reference ref="oh" />
             <reference ref="addr" />
             <reference ref="wikipedia" />
-            <reference ref="oh" />
             <optional>
             <reference ref="contact" />
             <reference ref="architecture" />
             </optional>
         </item>
-        <item name="Confessional school" uk.name="Конфесіональна школа" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Confessional school" uk.name="Конфесійна школа" icon="" type="node,closedway,multipolygon" preset_name_label="true">
             <key key="religion" value="christian" />
             <key key="amenity" value="school" />
-            <reference ref="orthodox_denomination" />
+            <key key="building" value="school" />
             <reference ref="name" />
+            <reference ref="orthodox_denomination" />
             <reference ref="addr" />
             <reference ref="oh" />
             <optional>
@@ -261,8 +303,8 @@
         <item name="Confessional shop" uk.name="Церковна крамниця" icon="" type="node,closedway,multipolygon" preset_name_label="true">
             <key key="religion" value="christian" />
             <key key="shop" value="religion" />
-            <reference ref="orthodox_denomination" />
             <reference ref="name" />
+            <reference ref="orthodox_denomination" />
             <reference ref="addr" />
             <reference ref="oh" />
         </item>
@@ -271,9 +313,7 @@
             <space />
             <label text="Orthodox Grave yard" uk.text="Цвинтар біля церкви"/>
             <space />
-                <reference ref="name" />
                 <reference ref="orthodox_denomination" />
-                <reference ref="wikipedia" />
                 <reference ref="grave_yard" />
                 <reference ref="oh" />
         </item>
@@ -290,8 +330,8 @@
             <key key="landuse" value="religious" />
             <key key="religion" value="christian" />
             <key key="amenity" value="monastery" />
-            <reference ref="orthodox_denomination" />
             <reference ref="name" />
+            <reference ref="orthodox_denomination" />
             <reference ref="addr" />
             <reference ref="contact" />
                 <optional>
@@ -301,23 +341,47 @@
         </item>
     </group>
     <group name="Protestants" uk.name="Протестантизм" icon="https://upload.wikimedia.org/wikipedia/commons/7/7f/LatinCross.png">
-        <item name="Church" uk.name="Церква" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Entrance" uk.name="Вхідна брама" icon="" type="node" preset_name_label="true">
+            <key key="entrance" value="main" />  
+        </item>
+        <item name="Sculpture" uk.name="Скульптура" icon="" type="node" preset_name_label="true">
             <key key="religion" value="christian" />
-            <reference ref="protestant_denomination" />
+            <key key="denomination" value="protestant_denomination" />
+            <key key="tourism" value="artwork" />
             <reference ref="name" />
+            <combo key="artwork_type" values="bust,statue,sculpture" text="Sculpture" uk.text="Скульптура" uk.display_values="бюст,статуя,скульптурна композиція" default="sculpture" delete_if_empty="true" />
+        </item>
+        <item name="Cross" uk.name="Хрест" icon="" type="node" preset_name_label="true">
+            <key key="man_made" value="cross" />
+            <key key="religion" value="christian" />
+            <reference ref="name" />
+            <reference ref="protestant_denomination" />
+            <combo key="historic" values="wayside_cross,wayside_shrine" text="Wayside cross" uk.text="Придорожній хрест" uk.display_values="Придорожній хрест,Святиня на узбіччі" delete_if_empty="true" />
+            <text key="height" text="Height" uk.text="Висота" />
+        </item>
+        <separator/>
+        <item name="Church" uk.name="Церква, Храм" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+            <key key="amenity" value="place_of_worship" />
+            <key key="building" value="church" />
+            <key key="religion" value="christian" />
+            <reference ref="name" />
+            <reference ref="protestant_denomination" />
+            <space />
+            <reference ref="service_times" />
+            <reference ref="oh" />
             <reference ref="addr" />
             <reference ref="wikipedia" />
-            <reference ref="oh" />
             <optional>
             <reference ref="contact" />
             <reference ref="architecture" />
             </optional>
         </item>
-        <item name="Confessional school" uk.name="Конфесіональна школа" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Confessional school" uk.name="Конфесійна школа" icon="" type="node,closedway,multipolygon" preset_name_label="true">
             <key key="religion" value="christian" />
             <key key="amenity" value="school" />
-            <reference ref="protestant_denomination" />
+            <key key="building" value="school" />
             <reference ref="name" />
+            <reference ref="protestant_denomination" />
             <reference ref="addr" />
             <reference ref="oh" />
             <optional>
@@ -329,19 +393,12 @@
         <item name="Confessional shop" uk.name="Церковна крамниця" icon="" type="node,closedway,multipolygon" preset_name_label="true">
             <key key="religion" value="christian" />
             <key key="shop" value="religion" />
-            <reference ref="protestant_denomination" />
             <reference ref="name" />
+            <reference ref="protestant_denomination" />
             <reference ref="addr" />
             <reference ref="oh" />
         </item>
-        <item name="Cross" uk.name="Хрест" icon="" type="node" preset_name_label="true">
-            <key key="man_made" value="cross" />
-            <key key="religion" value="christian" />
-            <reference ref="protestant_denomination" />
-            <reference ref="name" />
-            <combo key="historic" values="wayside_cross,wayside_shrine" text="Wayside cross" uk.text="Придорожній хрест" uk.display_values="Придорожній хрест,Святиня на узбіччі" delete_if_empty="true" />
-            <text key="height" text="Height" uk.text="Висота" />
-        </item>
+        <separator/>
         <item name="Church Land" uk.name="Територія храму" icon="" type="closedway,multipolygon" preset_name_label="true">
             <key key="landuse" value="religious" />
             <key key="religion" value="christian" />
@@ -349,6 +406,19 @@
                 <optional>
                     <reference ref="fence" />
                     <reference ref="name" />
+                </optional>
+        </item>
+        <item name="Monastery land" uk.name="Територія монастиря" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+            <key key="landuse" value="religious" />
+            <key key="religion" value="christian" />
+            <key key="amenity" value="monastery" />
+            <reference ref="name" />
+            <reference ref="protestant_denomination" />
+            <reference ref="addr" />
+            <reference ref="contact" />
+                <optional>
+                    <combo key="community:gender" text="Gender" uk.text="Стать" values="male,female,mixed" uk.display_values="чоловічий,жіночий,змішаний" default="" delete_if_empty="true" />
+                    <reference ref="fence" />
                 </optional>
         </item>
     </group>
