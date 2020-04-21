@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
 	author="Fedir Gontsa, fedir.gontsa@gmail.com, https://www.openstreetmap.org/user/Gontsa"
-	description="Denominations represented in Ukraine"
+	description="Christian denominations represented in Ukraine"
     uk.description="Заготовки для додавання об'єктів християнських конфесій, представлених в Україні"
 	shortdescription="Denominations"
     uk.shortdescription="Конфесії"
