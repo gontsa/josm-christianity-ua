@@ -85,7 +85,10 @@
 <group name="Denomination in Ukraine" uk.name="Християнські об'єкти в Україні">
     <group name="Catholic" uk.name="Католицизм" icon="https://upload.wikimedia.org/wikipedia/commons/7/7f/LatinCross.png">
         <item name="Entrance" uk.name="Вхідна брама" icon="" type="node" preset_name_label="true">
-            <key key="entrance" value="main" />  
+            <key key="barrier" value="gate" />
+            <key key="entrance" value="main" />
+            <space />
+            <reference ref="desc" />
         </item>
         <item name="Sculpture" uk.name="Скульптура" icon="" type="node" preset_name_label="true">
             <key key="religion" value="christian" />
@@ -233,7 +236,10 @@
     </group>
     <group name="Orthodox" uk.name="Православ'я" icon="https://upload.wikimedia.org/wikipedia/commons/e/e9/OrthodoxCross.svg">
         <item name="Entrance" uk.name="Вхідна брама" icon="" type="node" preset_name_label="true">
-            <key key="entrance" value="main" />  
+            <key key="barrier" value="gate" />
+            <key key="entrance" value="main" />
+            <space />
+            <reference ref="desc" />
         </item>
         <item name="Sculpture" uk.name="Скульптура" icon="" type="node" preset_name_label="true">
             <key key="religion" value="christian" />
@@ -378,7 +384,10 @@
     </group>
     <group name="Protestants" uk.name="Протестантизм" icon="https://upload.wikimedia.org/wikipedia/commons/7/7f/LatinCross.png">
         <item name="Entrance" uk.name="Вхідна брама" icon="" type="node" preset_name_label="true">
-            <key key="entrance" value="main" />  
+            <key key="barrier" value="gate" />
+            <key key="entrance" value="main" />
+            <space />
+            <reference ref="desc" />
         </item>
         <item name="Sculpture" uk.name="Скульптура" icon="" type="node" preset_name_label="true">
             <key key="religion" value="christian" />
