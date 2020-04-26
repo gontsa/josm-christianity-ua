@@ -5,8 +5,10 @@
     uk.description="Заготовки для додавання об'єктів християнських конфесій, представлених в Україні"
 	shortdescription="Denominations"
     uk.shortdescription="Конфесії"
-	version="v0.4.1_2020-04-26">
+    icon="https://upload.wikimedia.org/wikipedia/commons/7/7f/LatinCross.png"
+    version="v0.4.2_2020-04-26">
 <!-- 
+    version v0.4.1_2020-04-26
     Thanks for the help:
     Alex Zaikin https://www.openstreetmap.org/user/slayzex
     Pavlo Dudka https://www.openstreetmap.org/user/dudka
@@ -82,7 +84,7 @@
     <text key="description:ru" text="RU:Description" uk.text="російською" />
 </chunk>
 <!-- Menu -->
-<group name="Denomination in Ukraine" uk.name="Християнські об'єкти в Україні">
+<group name="Denomination in Ukraine" uk.name="Християнські об'єкти в Україні" icon="https://upload.wikimedia.org/wikipedia/commons/7/7f/LatinCross.png">
     <group name="Catholic" uk.name="Католицизм" icon="https://upload.wikimedia.org/wikipedia/commons/7/7f/LatinCross.png">
         <item name="Entrance" uk.name="Вхідна брама" icon="" type="node" preset_name_label="true">
             <key key="barrier" value="gate" />
