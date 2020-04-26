@@ -12,6 +12,9 @@ JOSM Preset for mapping Christianity objects in Ukraine on OpenStreetMap
 3. Fix other styles.
 
 ## Howto Install JOSM Presets
+
+**What should be done before installation In the testing mode** -> [Wiki](https://github.com/gontsa/josm-christianity-ua/wiki)
+
 Add `https://raw.githubusercontent.com/gontsa/josm-christianity-ua/master/christian-ua.xml` in JOSM editor.
 
 **Uk**: *Заготовки* -> *Preset preferences* -> *Активні заготовки* «+»
