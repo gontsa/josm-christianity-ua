@@ -62,14 +62,14 @@
 <chunk id="architecture">
     <link wiki="Key:building:architecture" text="Architectural style" uk.text="Архітектурний стиль" />
     <combo key="building:architecture" text="Architectural style" uk.text="Архітектурний стиль" values="contemporary,modern,neo-gothic,eclectic,neo-byzantine,historicism,neoclassicism,rococo,baroque,renaissance,romanesque" uk.display_values="сучасний,модерн,нео-готика,еклектика,неовізантійський,історизм,класицизм,рококо,бароко,ренесанс,романський" values_searchable="true" />
-    <combo key="building:use" text="Building use" uk.text="Використовується" values="place_of_worship,warehouse,industrial,commercial,residential" uk.display_values="" default="place_of_worship" delete_if_empty="true" />
+    <combo key="building:use" text="Building use" uk.text="Використовується" values="place_of_worship,warehouse,industrial,commercial,residential" uk.display_values="" default="" delete_if_empty="true" />
     <text key="start_date" text="Start date" uk.text="Дата будівництва" />
     <text key="architect" text="Architect" uk.text="Архітектор" />
     <space />
-    <combo key="building:material" text="Material Type" uk.text="Будівельний Матеріал" values="plaster,brick,silicate_brick,stone,concrete,wood,glass,metal,vinyl" uk.display_values="штукатурка,червона цегла,силікатна цегла,камінь,бетон,дерево,скло,метал,пластикова вагонка" default="brick" delete_if_empty="true" />
+    <combo key="building:material" text="Material Type" uk.text="Будівельний Матеріал" values="plaster,brick,silicate_brick,stone,concrete,wood,glass,metal,vinyl" uk.display_values="штукатурка,червона цегла,силікатна цегла,камінь,бетон,дерево,скло,метал,пластикова вагонка" default="" delete_if_empty="true" />
 </chunk>
 <chunk id="catholic_denomination">
-    <combo key="denomination" text="Denomination" uk.text="Конфесія" values="roman_catholic,ukrainian_greek_catholic,mukachiv_greek_catholic" uk.display_values="Римо-Католицька Церква в Україні,Українська Греко-Католицька Церква,Мукачівська греко-католицька єпархія" default="ukrainian_greek_catholic" delete_if_empty="true" />
+    <combo key="denomination" text="Denomination" uk.text="Конфесія" values="roman_catholic,ukrainian_greek_catholic,mukachiv_greek_catholic" uk.display_values="Римо-Католицька Церква в Україні,Українська Греко-Католицька Церква,Мукачівська греко-католицька єпархія" default="" delete_if_empty="true" />
 </chunk>
 <chunk id="orthodox_denomination">
     <combo key="denomination" text="Denomination" uk.text="Конфесія" values="ukrainian_orthodox,russian_orthodox" uk.display_values="Православна церква України,Українська православна церква МП" default="" delete_if_empty="true" />
@@ -97,7 +97,7 @@
             <key key="denomination" value="catholic" />
             <key key="tourism" value="artwork" />
             <reference ref="name" />
-            <combo key="artwork_type" values="bust,statue,sculpture" text="Sculpture" uk.text="Скульптура" uk.display_values="бюст,статуя,скульптурна композиція" default="sculpture" delete_if_empty="true" />
+            <combo key="artwork_type" values="bust,statue,sculpture" text="Sculpture" uk.text="Скульптура" uk.display_values="бюст,статуя,скульптурна композиція" default="" delete_if_empty="true" />
             <space />
             <reference ref="desc" />
         </item>
@@ -248,7 +248,7 @@
             <key key="denomination" value="orthodox" />
             <key key="tourism" value="artwork" />
             <reference ref="name" />
-            <combo key="artwork_type" values="bust,statue,sculpture" text="Sculpture" uk.text="Скульптура" uk.display_values="бюст,статуя,скульптурна композиція" default="sculpture" delete_if_empty="true" />
+            <combo key="artwork_type" values="bust,statue,sculpture" text="Sculpture" uk.text="Скульптура" uk.display_values="бюст,статуя,скульптурна композиція" default="" delete_if_empty="true" />
             <space />
             <reference ref="desc" />
         </item>
