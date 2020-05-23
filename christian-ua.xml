@@ -277,25 +277,26 @@
             <key key="amenity" value="place_of_worship" />
             <key key="religion" value="christian" />
             <key key="building" value="cathedral" />
-            <reference ref="name" />
             <reference ref="orthodox_denomination" />
+            <reference ref="name" />
             <space />
             <reference ref="service_times" />
             <reference ref="oh" />
-            <reference ref="addr" />
             <reference ref="wikipedia" />
+            <space />
+            <reference ref="addr" />
             <space />
             <reference ref="contact" />
             <reference ref="architecture" />
             <space />
             <reference ref="desc" />
         </item>
-        <item name="Church" uk.name="Церква, Храм" icon="" type="node,closedway,multipolygon" preset_name_label="true">
+        <item name="Church" uk.name="Храм, Церква" icon="" type="node,closedway,multipolygon" preset_name_label="true">
             <key key="amenity" value="place_of_worship" />
             <key key="religion" value="christian" />
             <key key="building" value="church" />
-            <reference ref="name" />
             <reference ref="orthodox_denomination" />
+            <reference ref="name" />
             <space />
             <reference ref="service_times" />
             <reference ref="oh" />
@@ -363,10 +364,10 @@
             <key key="landuse" value="religious" />
             <key key="religion" value="christian" />
             <reference ref="orthodox_denomination" />
-                <space />
-                    <reference ref="fence" />
-                    <reference ref="name" />
-                <space />
+            <space />
+                <reference ref="fence" />
+                <reference ref="name" />
+            <space />
                 <reference ref="desc" />
         </item>
         <item name="Monastery land" uk.name="Територія монастиря" icon="" type="node,closedway,multipolygon" preset_name_label="true">
