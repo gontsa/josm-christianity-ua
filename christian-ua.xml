@@ -72,7 +72,7 @@
     <combo key="denomination" text="Denomination" uk.text="Конфесія" values="roman_catholic,ukrainian_greek_catholic,mukachiv_greek_catholic" uk.display_values="Римо-Католицька Церква в Україні,Українська Греко-Католицька Церква,Мукачівська греко-католицька єпархія" default="" delete_if_empty="true" />
 </chunk>
 <chunk id="orthodox_denomination">
-    <combo key="denomination" text="Denomination" uk.text="Конфесія" values="ukrainian_orthodox,russian_orthodox" uk.display_values="Православна церква України,Українська православна церква МП" default="" delete_if_empty="true" />
+    <combo key="denomination" text="Denomination" uk.text="Конфесія" values="ukrainian_orthodox,russian_orthodox" uk.display_values="ПЦУ,УПЦ МП" default="" delete_if_empty="true" />
 </chunk>
 <chunk id="protestant_denomination">
     <combo key="denomination" text="Denomination" uk.text="Конфесія" values="anglican,baptist,charismatic,jehovahs_witness,lutheran,mennonite,mormon,pentecostal,reformed,seventh_day_adventist" default="" delete_if_empty="true" />
